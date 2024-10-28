@@ -35,14 +35,13 @@
     </style>
     
 <script>
-        window.Telegram.WebApp.MainButton.show()
-        
-        window.Telegram.WebApp.MainButton.text = "Next"
-        const page = document.querySelector('.Random');
-            const links = ['2.html', '3.html'];
-            
-            page.onclick = function(event) {
-              event.preventDefault();
-              window.location.href = links[Math.floor(Math.random() * links.length)];
-        };
+window.Telegram.WebApp.MainButton.show()
+window.Telegram.WebApp.MainButton.text = "Next"
+const page = document.querySelector('.Random');
+const links = ['1.html', '2.html', '3.html'];
+
+window.Telegram.WebApp.MainButton.onClick = () => {
+  window.location.href = links[Math.floor(Math.random() * links.length)];
+};
+
 </script>
