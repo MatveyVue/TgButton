@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalble=none">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tiny5&display=swap" rel="stylesheet">
+    <title>HowYou</title>
+  </head>
+<body>
+<center>
+<div style="background-color: rgb(255, 255, 255); margin-left: -3vw; margin-top: -8vw; width: 101vw; height: 100vw; border-radius: 25px;">
+    <h3 style="color: white;">...</h3>
+    <h1 style="font-family: Roboto; color: rgb(0, 0, 0);">Who are you:</h1>
+    <h2 style="font-family: Roboto; color: rgb(112, 112, 112);">You Clown</h2>
+    <img src="https://em-content.zobj.net/source/telegram/386/clown-face_1f921.webp" width="200vw">
+</div>
+</center>
+</body>
+</html>
+
+<style>
+    body {
+        background-color: rgb(212, 212, 212);
+        touch-action: none;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        position: relative;
+        user-select: none;
+        width: 100vw;
+        height: 100vw;
+    }
+    </style>
+    
+<script>
+        window.Telegram.WebApp.MainButton.show()
+        
+        window.Telegram.WebApp.MainButton.text = "Next"
+        const page = document.querySelector('.Random');
+            const links = ['2.html', '3.html'];
+            
+            page.onclick = function(event) {
+              event.preventDefault();
+              window.location.href = links[Math.floor(Math.random() * links.length)];
+        };
+</script>
