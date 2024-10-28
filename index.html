@@ -39,7 +39,7 @@ window.Telegram.WebApp.MainButton.text = "Next"
 const page = document.querySelector('.Random');
     const links = ['1.html', '2.html', '3.html'];
     
-    tg.onEvent("mainButtonClicked", () => {
+    window.Telegram.WebApp.onEvent("mainButtonClicked", () => {
       window.location.href = links[Math.floor(Math.random() * links.length)];
 })
 </script>
