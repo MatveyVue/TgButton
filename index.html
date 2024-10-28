@@ -10,13 +10,37 @@
     <title>BlumPad</title>
   </head>
 <body>
+  <center>
+    <div style="background-color: rgb(255, 255, 255); margin-left: -3vw; margin-top: -8vw; width: 101vw; height: 100vw; border-radius: 25px;">
+        <h3 style="color: white;">...</h3>
+        <h1 style="font-family: Roboto; color: rgb(0, 0, 0);">Who are you:</h1>
+    </div>
+    </center>
 </body>
 </html>
 
+<style>
+  body {
+      background-color: rgb(212, 212, 212);
+      touch-action: none;
+      overflow-y: hidden;
+      overflow-x: hidden;
+      position: relative;
+      user-select: none;
+      width: 100vw;
+      height: 100vw;
+  }
+  </style>
+
 <script>
-header_bg_color = "var(--tg-theme-header-bg-color)"
 window.Telegram.WebApp.MainButton.show()
 
 window.Telegram.WebApp.MainButton.text = "Next"
-window.location.href = "index.html"
+const page = document.querySelector('.Random');
+    const links = ['1.html', '2.html', '3.html'];
+    
+    page.onclick = function(event) {
+      event.preventDefault();
+      window.location.href = links[Math.floor(Math.random() * links.length)];
+};
 </script>
